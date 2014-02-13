@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Speech Map</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
+    <script src="/js/speech_recognition.js" type="text/javascript"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="styles/style.css" rel='stylesheet'>
+
+</head>
+
+<body>
+    <div id="header">
+        <div id="interim">Start speaking to interact with the map</div>
+    </div>
+    <img id="ajaxLoader" src="img/ajax-loader.gif"></img>
+    <div id="map"></div>
+    <div id="content">
+        <div id="innerContent">
+            <h1>Speech controlled map interaction</h1>
+            This is a prototypical demo showing how to control a map using natural speech interaction.
+            <br>
+            <br>
+
+            <b>Possible Interactions so far:</b>
+            <ul>
+                <li>panning</li>
+                <li>zooming</li>
+                <li>creating markers</li>
+                <li>drawing lines</li>
+            </ul>
+
+            <b>Try to use sentences like:</b>
+            <br>
+            <ul>
+                <li>"Move to San Francisco"</li>
+                <li>"Draw a marker in America"</li>
+                <li>"Set a point in chicago"</li>
+                <li>"Connect Los Angelas and San Francisco"</li>
+                <li>"Zoom in"</li>
+                <li>"Pan up"</li>
+                <li>"Pan to the left"</li>
+            </ul>
+
+            <b>Hints/ Problems: </b>
+            <br>
+            <ul>
+                <li>Based on the geocoder only locations in America are useful</li>
+                <li>The webkit speech recognition seems to randomly stop, which is why it asks repeadetly for permissions</li>
+            </ul>
+
+            The speech recognition is based on the natural language interface <a href="https://wit.ai/" target="_blank">Wit</a>
+            <br>Geocoding is done using <a href="http://developer.mapquest.com/" target="_blank">mapquest</a>
+            <br>
+            <br>Developed by <a href="https://github.com/dwilhelm89/SpeechMap" target="_blank">Dennis Wilhelm</a>
+        </div>
+    </div>
+
+
+    <script>
+    var map = L.map('map').setView([20, -91], 3);
+
+    L.tileLayer('https://{s}.tiles.mapbox.com/v3/dnns.h8dkb1bh/{z}/{x}/{y}.png', {
+        attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+    }).addTo(map);
+
+    //Init the speach interaction
+    SpeechMap.init();
+    </script>
+
+</body>
+
+</html>
