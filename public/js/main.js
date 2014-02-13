@@ -91,14 +91,14 @@ var SpeechMap = {
                 if (result.locations && result.locations[0] && result.locations[0].latLng) latLng1 = result.locations[0].latLng;
                 if (latLng1 && latLng2) L.polyline([latLng1, latLng2]).addTo(map);
                 this.toggleLoader(false);
-            };
+            }.bind(this);
 
             var callbackFunction2 = function(result) {
                 if (result && result.results) result = result.results[0];
                 if (result.locations && result.locations[0] && result.locations[0].latLng) latLng2 = result.locations[0].latLng;
                 if (latLng1 && latLng2) L.polyline([latLng1, latLng2]).addTo(map);
                 this.toggleLoader(false);
-            };
+            }.bind(this);
 
             this.geocode(loc1, callbackFunction1);
             this.geocode(loc2, callbackFunction2);
