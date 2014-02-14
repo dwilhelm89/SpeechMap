@@ -2,7 +2,7 @@ SpeechMap
 =============
 
 This is a prototypical demo showing how to control a map using natural speech interaction. 
-Check out the [Demo](http://dnns-14394.euw1.nitrousbox.com:8080/)!
+Check out the [Demo](http://speechmap.herokuapp.com/)!
 
 
 
