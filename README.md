@@ -33,7 +33,7 @@ Hints/ Problems:
 
 
 
-Based on :
+Based on:
 ----
  
 * [Leaflet](leafletjs.com) 
