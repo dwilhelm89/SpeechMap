@@ -19,7 +19,7 @@ Try to use sentences like:
 * "Move to San Francisco"
 * "Draw a marker in America"
 * "Set a point in chicago"
-* "Connect Los Angelas and San Francisco"
+* "Connect Los Angeles and San Francisco"
 * "Zoom in"
 * "Pan up"
 * "Pan to the left"
