@@ -4,6 +4,7 @@ SpeechMap
 This is a prototypical demo showing how to control a map using natural speech interaction. 
 Check out the [Demo](http://speechmap.herokuapp.com/)!
 
+UPDATE: Based on a set of API changes, the demo doesn't work anymore!
 
 
 Possible Interactions so far:
